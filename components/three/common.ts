@@ -108,7 +108,7 @@ export function adaptivePixelRatio(renderer: THREE.WebGLRenderer, el: HTMLElemen
       return;
     }
     let next = ratio;
-    if (ema > 1 / 28 && ratio > 0.5) next = Math.max(0.5, ratio * 0.8);
+    if (ema > 1 / 28 && ratio > 0.75) next = Math.max(0.75, ratio * 0.85);
     else if (ema < 1 / 55 && ratio < max) next = Math.min(max, ratio * 1.12);
     if (next !== ratio) {
       ratio = next;
